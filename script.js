@@ -4,40 +4,40 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // Collect employee data
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
-   let employeesArray = []
+  const employeeArray = []
+   let keepGoing = true
+  
+  while (keepGoing) {
+    const employeeFirstName = prompt("Whats your first name?")
+    const employeeLastName = prompt("Whats your last name?")
+    const employeeSalary = prompt("Whats your salary?")
 
-   for (let i = 0; i < 4; i++) {
-    const firstName = prompt("Enter first name:")
-    const lastName = prompt("Enter last name:")
-    const salary = prompt("Enter salary:")
-   employeesArray.push({firstName, lastName, salary: Number(salary)})
-    const response = confirm("Do you want to add another employee?")
-    if (!response) {
-      break
+    employeeObj = {
+      firstName: employeeFirstName,
+      lastName: employeeLastName,
+      salary: employeeSalary
     }
 
-   }
+    employeeArray.push(employeeObj)
 
-   console.log(employeesArray)
+     const toContinue = confirm("Do you want to add another employee?")
+
+     keepGoing = toContinue
+
+   
+  }
+  
+  console.log(employeeArray)
+  return employeeArray
+
 }
+
 
 // const employeeArray = [firstName, lastName, salary]
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
 
-
-   let totalSalary = 0 
-
-   for (const employee of employeesArray) {
-    totalSalary += employee.salary
-   }
-    
-   let averageSalary = totalSalary / employeesArray.length
-
-   console.log("Average Salary:" + averageSalary)
-
-   document.getElementById("employee-table").textContent = 'Average Salary:' + averageSalary
 
 
 
