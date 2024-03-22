@@ -12,7 +12,7 @@ const collectEmployees = function() {
     const employeeLastName = prompt("Whats your last name?")
     const employeeSalary = prompt("Whats your salary?")
 
-    employeeObj = {
+    const employeeObj = {
       firstName: employeeFirstName,
       lastName: employeeLastName,
       salary: employeeSalary
@@ -26,7 +26,7 @@ const collectEmployees = function() {
 
    
   }
-  
+
   console.log(employeeArray)
   return employeeArray
 
