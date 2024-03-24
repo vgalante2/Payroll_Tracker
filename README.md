@@ -20,7 +20,7 @@ This Employee Management System is a web-based application designed to help orga
 
 ## Deployment
 
-Provided as a link here - [Module 01](Your_REPO_LINK)
+Provided as a link here - [Module 01](https://vgalante2.github.io/Payroll_Tracker/)
 
 ## Usage
 
